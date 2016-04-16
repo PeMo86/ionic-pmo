@@ -54330,43 +54330,41 @@ IonicModule
 ]));
 
 
-/**
- * @ngdoc service
- * @name $ionicSideMenuDelegate
- * @module ionic
- *
- * @description
- * Delegate for controlling the {@link ionic.directive:ionSideMenus} directive.
- *
- * Methods called directly on the $ionicSideMenuDelegate service will control all side
- * menus.  Use the {@link ionic.service:$ionicSideMenuDelegate#$getByHandle $getByHandle}
- * method to control specific ionSideMenus instances.
- *
- * @usage
- *
- * ```html
- * <body ng-controller="MainCtrl">
- *   <ion-side-menus>
- *     <ion-side-menu-content>
- *       Content!
- *       <button ng-click="toggleLeftSideMenu()">
- *         Toggle Left Side Menu
- *       </button>
- *     </ion-side-menu-content>
- *     <ion-side-menu side="left">
- *       Left Menu!
- *     <ion-side-menu>
- *   </ion-side-menus>
- * </body>
- * ```
- * ```js
- * function MainCtrl($scope, $ionicSideMenuDelegate) {
- *   $scope.toggleLeftSideMenu = function() {
- *     $ionicSideMenuDelegate.toggleLeft();
- *   };
- * }
- * ```
+
+ /*@ngdoc service
+ @name $ionicSideMenuDelegate
+  @module ionic
+ 
+  @description
+  Delegate for controlling the {@link ionic.directive:ionSideMenus} directive.
+ 
+  Methods called directly on the $ionicSideMenuDelegate service will control all side
+  menus.  Use the {@link ionic.service:$ionicSideMenuDelegate#$getByHandle $getByHandle}
+  method to control specific ionSideMenus instances.
+ 
+  @usage
  */
+
+  <body ng-controller="MainCtrl">
+    <ion-side-menus>
+      <ion-side-menu-content>
+        Content!
+        <button ng-click="toggleLeftSideMenu()">
+          Toggle Left Side Menu
+        </button>
+      </ion-side-menu-content>
+      <ion-side-menu side="left">
+        Left Menu!
+      <ion-side-menu>
+    </ion-side-menus>
+  </body>
+  
+  function MainCtrl($scope, $ionicSideMenuDelegate) {
+    $scope.toggleLeftSideMenu = function() {
+      $ionicSideMenuDelegate.toggleLeft();
+    };
+  }
+   
 IonicModule
 .service('$ionicSideMenuDelegate', ionic.DelegateService([
   /**
